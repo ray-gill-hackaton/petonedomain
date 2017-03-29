@@ -5,3 +5,5 @@ applications:
   instances: 1
   host: travis-pet-client
   buildpack: staticfile_buildpack
+  domain: http://pcf-apps.intware.com
+  host: travis-pet
