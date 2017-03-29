@@ -1,0 +1,7 @@
+---
+applications:
+- name: travis-pet-client
+  memory: 128M
+  instances: 1
+  host: travis-pet-client
+  buildpack: staticfile_buildpack

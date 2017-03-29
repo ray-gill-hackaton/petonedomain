@@ -1,0 +1,9 @@
+security:
+  user:
+    name: santo
+    password: baby
+server:
+  port: 8090
+logging:
+  level:
+    org.springframework.security: INFO  

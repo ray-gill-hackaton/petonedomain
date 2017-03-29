@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <div class="alert alert-danger" ng-show="petAdd.error">
+    There was a problem adding the pet.
+  </div>
+
+  <div id="addSuccess" class="alert alert-success" ng-show="petAdd.id">
+    Added pet with id:  <span id="addId">{{petAdd.id}}</span>
+  </div>
+
+  <h1>Add Pet</h1>
+  <form role="form" ng-submit="petAdd.add(petAdd.name, petAdd.description)">
+    <div class="form-group">
+      <label for="name">Pet Name</label>
+      <input class="form-control input-lg" id="name" type="text" ng-model="petAdd.name">
+      <label for="description">Pet Description</label>
+      <input class="form-control input-lg" id="description" type="text" ng-model="petAdd.description"><br>
+      <input class="input-lg" type="submit" id="add" value="Add Pet" />
+    </div>
+  </form>
+</div>

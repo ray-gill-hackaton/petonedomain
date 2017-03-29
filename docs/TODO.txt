@@ -1,0 +1,8 @@
+TODOS:
+
+- put login/logout code in service
+- render login link only if user logged in [partial fix - only works on login page for now]
+- add more users via in-memory authentication
+- add roles
+- e2e
+- ui tweaks	
