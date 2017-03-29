@@ -3,9 +3,9 @@ jdk:
 - oraclejdk8
 cache:
   directories:
-  - $HOME/.m2
-  - $HOME/pet/pet-client/node_modules
-  - $HOME/pet/pet-client/bower_components
+  - "$HOME/.m2"
+  - "$HOME/pet/pet-client/node_modules"
+  - "$HOME/pet/pet-client/bower_components"
 before_install:
 - npm install -g npm@^3
 - npm install -g bower
@@ -18,17 +18,12 @@ script:
 - bower install
 - npm test
 - cd ../pet-server
-#- mkdir target
-#- cp ./pet-server/target/pet-server-*.jar ./target/
-#deploy:
-#  password:
-#    secure: wLOBSjHBXv3UZjdwLeyYlbH7FBaJZTdvO0mK2KVSl2I2sZjZj+cdyvRXVLduNY+Vn6OOg2Vx7gsKAyC/FUa9UqeZ4Gkk7npgWzwJEF+uaGTqQa8LEH7h4pum2XfvgX3PHIa8+bp5BbgxSWEv+lgKqpyu0NkjpXuGmmDtI0tQieUBbp04EraUK/XAAx7n6SeIUio6hdBQoz2NqIDb6+N0I5Dd6DwQfVlOLW+C97yqqU5wYb78UEjfNwdQ1cVmv2fgLxyT6cfG14ic2ilW80bT1cPiIo2+kY/lfVS+HMJK4s0eAC5Vm2Yqe/Yqwumhe3AhuLOL8HccAlh8s22TirmruaM7RnW1UHj8dGFsaVQB+E7QRHYPpneN/rZwW0OFPXSZoH1QA/JJELhM119W9PbhbCM2M1p1jZsJIEy9EqPfJ8PiHRp36CTxB5YmqG85pc89AjVH6mo6XtUSBSPJCCbrQKBrQ3Cfa68V0dQqeFV78PXIauH+EsO3wIS5H6e/tg3I8JpUz20CToQjs3iZ0gsZl+5Rf9sk5iy2DJAWyAnSxU67hLitJSQ+daLW2qr1N1wiXtoXbmL2cmEcQTSliHRa/d/8DbDZbzx7D0gz7IU5xGLwuqhO+RjqPYjyIR5rPaTfgZO1rEpKtnVtBJR7KFk+TaTVgsprYWShnb6ziOX4aHs=
 deploy:
   edge: true
   provider: cloudfoundry
   username: Ray.Gill
-  password: 
-    secure: wLOBSjHBXv3UZjdwLeyYlbH7FBaJZTdvO0mK2KVSl2I2sZjZj+cdyvRXVLduNY+Vn6OOg2Vx7gsKAyC/FUa9UqeZ4Gkk7npgWzwJEF+uaGTqQa8LEH7h4pum2XfvgX3PHIa8+bp5BbgxSWEv+lgKqpyu0NkjpXuGmmDtI0tQieUBbp04EraUK/XAAx7n6SeIUio6hdBQoz2NqIDb6+N0I5Dd6DwQfVlOLW+C97yqqU5wYb78UEjfNwdQ1cVmv2fgLxyT6cfG14ic2ilW80bT1cPiIo2+kY/lfVS+HMJK4s0eAC5Vm2Yqe/Yqwumhe3AhuLOL8HccAlh8s22TirmruaM7RnW1UHj8dGFsaVQB+E7QRHYPpneN/rZwW0OFPXSZoH1QA/JJELhM119W9PbhbCM2M1p1jZsJIEy9EqPfJ8PiHRp36CTxB5YmqG85pc89AjVH6mo6XtUSBSPJCCbrQKBrQ3Cfa68V0dQqeFV78PXIauH+EsO3wIS5H6e/tg3I8JpUz20CToQjs3iZ0gsZl+5Rf9sk5iy2DJAWyAnSxU67hLitJSQ+daLW2qr1N1wiXtoXbmL2cmEcQTSliHRa/d/8DbDZbzx7D0gz7IU5xGLwuqhO+RjqPYjyIR5rPaTfgZO1rEpKtnVtBJR7KFk+TaTVgsprYWShnb6ziOX4aHs=
-  api: --skip-ssl-validation https://api.pcf-system.intware.com
+  password:
+    secure: KlG+QVNFB3izjnUKbXiaAh+DlACiPlo43iQusUq7mSZDFsg3p3+peW3u4oyq4Jne00nVO5XbWFBGoCR4aQFKRSd86A/qe0UwdLnWgNX+kxviEFH9tLfTSCzSXfZylZ4MaWjJCp5dPiEGoq8Zhn7hLoNiSIKdeVl2M1vfvSIpNOEhsGXYT/6+J65SQmXdpKpOR3GFaVoPUHJng8J8DfTkwIH4QChCsTH6fyFP1OHGC3vsqr3hiioYY/K9i1O3wxxn/DSGU7K/B59VdEqO8zdFRvI7XN44pgUciTQJKLwi+qBPOUJE5b6A56qsf2MikqtcB92xMxPEpWbgtOWTs83oC8aBDL7Kjwl7g4+xPncXWe6xNYzf9H4FBiYXmH4SmiyAWMyeqqsoEZRzKw39o2AkhpzJHGOXgd6GFm/ti0zjnvGAp0HFZcyANsbyDn8IAx/7LrLE5tDaA/XQr7sgSnAWSpj8rQUqixaWlAtYy6o5lL7fi5yQPhocdxh004f8ue/rQlnUrJDGzhXJNbMdmjLbZ+JZmJedYN1uPGavPzf5xdkXKdReW1J9Ep/ZdDFdWxMIKq4+tEdqkpVxbwUPevc7mficiiYbH9YLoDQye3pYTiQ4OtCcW8zeO2d7Jy5je/CTNTxD3yiVypXyMp6h4odymhb1FH5F4GI6EuL1EjKn+Sk=
+  api: "--skip-ssl-validation https://api.pcf-system.intware.com"
   organization: XtremeLearning
   space: travis-dev
